@@ -1,0 +1,13 @@
+pragma solidity 0.8.4;
+
+contract hashing{
+    
+    function firstHash(uint256 num, string memory hello) public pure returns(bytes32) {
+        bytes32 hash1= keccak256(abi.encodePacked(num, hello));
+        return hash1;
+    }
+    
+    function secondHash(string memory hi, uint num2) public pure returns(bytes32) {
+        bytes32 hash2= keccak256(abi.encodePacked(hi,num2));
+        return hash2;
+    }
